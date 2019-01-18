@@ -14,10 +14,11 @@ export default {
   },
   */
   methods:{
-    ...mapActions(["getData"])
+    ...mapActions({getData:"getData",inializeCart:"cart/initializeCart"})
   },
   created(){
     this.getData();
+    this.inializeCart(this.$store);
   }
 }
 </script>
